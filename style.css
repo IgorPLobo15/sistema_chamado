@@ -1,0 +1,118 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    color:#ff0000;
+    text-decoration:none;
+  }
+  a:visited {
+    color:#999999;
+    text-decoration:none;
+  }
+  a:hover {
+    color:#000000;
+    text-decoration:underline;
+  }
+  a:active {
+    color:#00ff00;
+    text-decoration:underline;
+    background-color:#000000;
+  }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+input[type="submit"] {
+    width: 150px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos do botão de logout */
+.logout-form {
+    text-align: right;
+    padding: 10px 20px;
+    
+}
+
+.logout-form input[type="submit"] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-form input[type="submit"]:hover {
+    background-color: #c82333;
+}
+
+/* Estilos da tabela de chamados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos do formulário de filtro */
+.filter-form {
+    margin-bottom: 20px;
+}
+
+.filter-form label {
+    margin-right: 10px;
+}
+
+.filter-form select,
+.filter-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-form input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-form input[type="submit"]:hover {
+    background-color: #218838;
+}
