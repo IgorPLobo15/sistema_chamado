@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Consulta SQL para obter todos os chamados abertos
 require_once "db_connection.php"; // Inclui o arquivo de conexão com o banco de dados
-$sql = "SELECT * FROM tickets WHERE status = 'open'";
+$sql = "SELECT * FROM tickets WHERE status = 'open' ORDER BY created_at DESC";
 $result = $conn->query($sql);
 
 ?>
