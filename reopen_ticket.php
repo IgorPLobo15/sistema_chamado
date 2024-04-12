@@ -9,7 +9,9 @@ if(isset($_GET['ticket_id'])) {
     $sql_reopen = "UPDATE closed_tickets SET closed_at = NULL WHERE id = $ticket_id";
     if ($conn->query($sql_reopen) === TRUE) {
         // Move o chamado da tabela 'closed_tickets' para 'tickets'
-        $sql_move_to_open = "INSERT INTO tickets (id, title, description, user_id, created_at) SELECT id, title, description, user_id, created_at FROM closed_tickets WHERE id = $ticket_id";
+        $sql_move_to_open = "INSERT INTO tickets (id, title, description, user_id, created_at) 
+                     SELECT id, title, description, user_id, NOW() AS created_at 
+                     FROM closed_tickets WHERE id = $ticket_id";
         if ($conn->query($sql_move_to_open) === TRUE) {
             // Remove o chamado da tabela 'closed_tickets'
             $sql_remove_from_closed = "DELETE FROM closed_tickets WHERE id = $ticket_id";
